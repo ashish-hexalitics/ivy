@@ -1,0 +1,497 @@
+/* CSS FOR THE PDF TEMPLATES */
+
+/* @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap'); */
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0 !important;
+  padding: 0 !important;
+  font-size: 13px !important;
+}
+
+/* @media print {
+    body{
+    width: 21cm !important;
+    height: 29.7cm !important;
+    margin: 20mm 20mm 20mm 20mm !important;
+    font-size: 13px !important;
+    /* change the margins as you want them to be. */
+
+@page {
+  size: A4;
+  margin: 20px;
+  margin-bottom: 30px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+th,
+td.label,
+td.response-no,
+td.response-yes,
+td.response-na,
+td.pad4,
+tr.maintenance-issue span,
+td.excellent,
+td.good,
+td.fair,
+td.poor {
+  font-weight: bold !important;
+}
+
+strong,
+b {
+  font-weight: bold;
+}
+
+/* .page-width {
+    width: min(100% - 40px, 1200px) !important;
+    } */
+
+.container {
+  margin: 0 auto !important;
+  padding: 5px !important;
+}
+
+.content {
+  margin-bottom: 20px !important;
+}
+
+.header .logo-div {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  /* padding: 20px !important; */
+  /* background-color: #f2f2f2 !important; */
+  border-bottom: 1px solid #ddd !important;
+}
+
+.logo {
+  width: 200px !important;
+  /* Adjust the width as needed */
+}
+
+img.ivy-logo {
+  max-width: 170px !important;
+}
+
+img.company-logo {
+  max-width: 170px !important;
+  /* Adjust the width as needed */
+}
+
+.header.page-width {
+  margin: 0 auto !important;
+  /* padding: 20px !important; */
+}
+
+.heading-h1 {
+  text-align: left !important;
+}
+
+.first-page {
+  padding-top: 0px !important;
+}
+
+table {
+  width: 100% !important;
+  margin-top: 10px !important;
+  border-collapse: collapse !important;
+}
+
+th,
+td {
+  border: 1px solid #ddd !important;
+  padding: 8px !important;
+  text-align: left !important;
+  /* width: 50% !important; */
+  vertical-align: middle !important;
+}
+
+.first-table td:nth-child(odd) {
+  width: 15% !important;
+}
+
+.first-table td:nth-child(even) {
+  width: 35% !important;
+}
+
+th {
+  background-color: #f2f2f2 !important;
+}
+
+tr {
+  widows: 4;
+}
+
+.visually-hidden {
+  clip: rect(0 0 0 0) !important;
+  clip-path: inset(100%) !important;
+  height: 1px !important;
+  overflow: hidden !important;
+  position: absolute !important;
+  width: 1px !important;
+  white-space: nowrap !important;
+}
+
+.toc-list,
+.toc-list ol {
+  list-style-type: none !important;
+}
+
+.toc-list {
+  padding: 0 !important;
+}
+
+.toc-list ol {
+  padding-inline-start: 2ch !important;
+}
+
+.toc-list li > a {
+  text-decoration: none !important;
+  display: grid !important;
+  grid-template-columns: auto max-content !important;
+  align-items: end !important;
+  font-weight: bold !important;
+  margin-block-start: 1em !important;
+}
+
+.toc-list li > a > .page {
+  min-width: 2ch !important;
+  font-variant-numeric: tabular-nums !important;
+  text-align: right !important;
+}
+
+.toc-list li > a > .title {
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+.toc-list li > a .leaders::after {
+  position: absolute !important;
+  padding-left: 0.25ch !important;
+  content: " . . . . . . . . . . . . . . . . . . . "
+    ". . . . . . . . . . . . . . . . . . . . . . . "
+    ". . . . . . . . . . . . . . . . . . . . . . . "
+    ". . . . . . . . . . . . . . . . . . . . . . . "
+    ". . . . . . . . . . . . . . . . . . . . . . . "
+    ". . . . . . . . . . . . . . . . . . . . . . . "
+    ". . . . . . . . . . . . . . . . . . . . . . . "
+    ". . . . . . . . . . . . . . . . . . . . . . . "
+    ". . . . . . . . . . . . . . . . . . . . . . . " !important;
+  text-align: right !important;
+}
+
+.meters table {
+  table-layout: fixed !important;
+}
+
+.meters th,
+.meters td {
+  width: unset !important;
+}
+
+.list-of-images {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  align-items: center !important;
+  margin-bottom: 20px !important;
+}
+
+.list-of-images figure {
+  height: 200px !important;
+  margin: 0px 5px 40px !important;
+}
+
+.list-of-images figcaption {
+  display: inline-block !important;
+  margin-top: 210px !important;
+}
+
+.list-of-images.larger figure {
+  max-width: calc(100% - 10px) !important;
+}
+
+.list-of-images img {
+  width: 100% !important;
+}
+
+.list-of-images a {
+  flex: 25% !important;
+  max-width: 25% !important;
+}
+
+.list-of-images.larger a {
+  flex: 50% !important;
+  max-width: 50% !important;
+}
+
+.inspectornotes {
+  padding: 2px 10px !important;
+  border: 1px solid #dddddd !important;
+  min-height: 100px !important;
+}
+
+.maintenance th,
+.maintenance td {
+  width: unset !important;
+}
+
+.maintenance th:first-child,
+.schedule th:first-child,
+.utilities th:first-child {
+  width: 25% !important;
+}
+
+.maintenance th:last-child {
+  width: 15% !important;
+}
+
+tr.maintenance-issue {
+  background: #caecf7 !important;
+}
+
+tr.maintenance-issue span {
+  border: 1px solid #666 !important;
+  border-radius: 3px !important;
+  padding: 3px !important;
+  font-size: 1em !important;
+}
+
+tr.maintenance-issue span.mr10 {
+  margin-right: 10px !important;
+}
+
+.roompage {
+  font-size: 12px !important;
+}
+.roompage td:first-child:not(.pad4) {
+  width: 16% !important;
+}
+
+/* .roompage td.pad4:first-child {
+  width: 7% !important;
+} */
+
+.roompage td:nth-child(2):not(.pad4, .pad4r) {
+  width: 67% !important;
+}
+
+.roompage td.pad4:nth-child(2) {
+  width: 10% !important;
+}
+
+td.overview {
+  font-weight: bold !important;
+  vertical-align: middle !important;
+  padding: 4px !important;
+}
+
+.roompage td.overview:first-child:not(.pad4, .pad4r) {
+  width: 14.5% !important;
+}
+
+.roompage td.overview-1:first-child:not(.pad4, .pad4r) {
+  width: 14.3% !important;
+}
+
+.roompage td.overview-4:first-child:not(.pad4, .pad4r) {
+  width: 14.4% !important;
+}
+
+.roompage td.overview-6:first-child:not(.pad4, .pad4r) {
+  width: 14.3% !important;
+}
+
+
+.definition th,
+.definition td {
+  width: unset !important;
+}
+
+.first-page {
+  text-align: center !important;
+  align-items: center !important;
+}
+
+.hero-img img {
+  height: 500px !important;
+  width: auto !important;
+}
+
+.first-table .label {
+  background-color: #f2f2f2 !important;
+}
+
+.first-table td,
+.first-table th {
+  width: unset !important;
+  height: 30px;
+}
+
+a.btn {
+  background: #0010f7 !important;
+  padding: 15px 10px !important;
+  font-weight: bold !important;
+  color: white !important;
+  text-decoration: none !important;
+  margin: 10px 5px 0 0 !important;
+  display: inline-block !important;
+}
+
+a.btn:hover {
+  background: #f2f2f2 !important;
+  color: black !important;
+}
+
+.footer {
+  margin-top: 10px !important;
+  margin: 0 auto !important;
+  padding: 20px !important;
+  display: flex !important;
+  justify-content: space-between !important;
+}
+
+.excellent {
+  background: #3636b4 !important;
+  color: white !important;
+}
+
+.good {
+  background: #0cbb0c !important;
+  color: white !important;
+}
+
+.fair {
+  background: #ecac36 !important;
+  color: black !important;
+}
+
+.poor {
+  background: #de2c2c !important;
+  color: white !important;
+}
+
+.pad4 {
+  padding: 4px !important;
+}
+
+.response-yes {
+  background: #0cbb0c !important;
+  color: white !important;
+}
+
+.response-na {
+  background: #ecac36 !important;
+  color: black !important;
+}
+
+.response-no {
+  background: #de2c2c !important;
+  color: white !important;
+}
+
+.signatures,
+.signatures td {
+  border: none !important;
+}
+
+.signatures b {
+  display: block !important;
+  margin-top: 10px !important;
+}
+
+.signatures img {
+  margin: 10px 0 !important;
+  min-width: 200px !important;
+  padding: 10px !important;
+  border: 1px solid #000 !important;
+}
+
+.propertynotes {
+  padding: 2px 10px !important;
+  border: 1px solid #dddddd !important;
+  margin-top: 10px !important;
+  min-height: 100px !important;
+}
+.item-comment {
+  border-radius: 7px !important;
+  border: 1px solid gray !important;
+  outline: none !important;
+  padding: 4px 0px 4px 4px !important;
+  width: 80% !important;
+  font-size: 1em !important;
+}
+.item-button {
+  border-radius: 7px !important;
+  border: none !important;
+  outline: none !important;
+  padding: 4px 10px !important;
+  background: #555 !important;
+  color: white !important;
+  font-size: 1em !important;
+  margin-right: 2% !important;
+  width: 17% !important;
+}
+.item-button:hover {
+  background: #0010f7 !important;
+}
+.checkout .pad4 {
+  width: 7% !important;
+}
+#inspector-feedback textarea {
+  border: 1px solid gray !important;
+  border-radius: 7px !important;
+  height: 70px !important;
+  width: 300px !important;
+  font-size: 1em !important;
+  display: block !important;
+  margin: 20px 0 !important;
+}
+#tenant-feedback textarea {
+  border: 1px solid gray !important;
+  border-radius: 7px !important;
+  height: 70px !important;
+  width: 300px !important;
+  font-size: 1em !important;
+  display: block !important;
+  margin: 20px 0 !important;
+}
+.checkout .roompage td:nth-child(2):not(.pad4, .pad4r) {
+  width: 31% !important;
+}
+.checkout .roompage td:nth-child(5):not(.pad4, .pad4r) {
+  width: 28% !important;
+}
+.pad4r {
+  padding: 4px !important;
+  min-width: 60px !important;
+}
+tr.maintenance-issue span {
+  font-size: 0.8em !important;
+}
+td div {
+  display: inline;
+}
+#footer1 {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 0px;
+  text-align: center;
+  padding-top: 300px;
+  padding-bottom: 0px;
+  font-size: 12px;
+  height: 50px;
+}
+/* .schedule th, .schedule td {
+    height: 30px;
+  }
+  .roompage th, .roompage td{
+    height: 20px;
+} */

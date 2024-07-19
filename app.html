@@ -1,0 +1,34 @@
+<td colspan="4"">
+    <button class=" item-button" style="cursor: pointer;" onClick="(function(){
+        document.getElementById('65ea8de7fac7a0c9b800e630').disabled = false;
+        document.getElementById('65ea8de7fac7a0c9b800e630').focus();
+        event.srcElement.style.backgroundColor = '#0010f7';
+        return false;
+    })();return false;">Leave comment?</button><input class="item-comment" disabled id="65ea8de7fac7a0c9b800e630" type="text" placeholder="Please add your feedback here"/>
+    <div style="display:flex; margin:10px 0px; gap: 8px; align-items: center;"><input style="display:none;" id="input65ea8de7fac7a0c9b800e630" type="file" onchange="(async function(){
+        const file = document.getElementById('input65ea8de7fac7a0c9b800e630').files[0];
+        const formData = new FormData();
+        formData.append('photo', file);
+        let options = {
+            method: 'POST',
+            headers: {
+                'x-api-key' : '1234567891'
+            },
+            body: formData
+        }
+        const res = await fetch(https://ivy.studiorav.co.uk/api/console/account/image_upload, options)
+        const data = await res.json()
+        const secure_url = data.data.secure_url
+        document.getElementById('img65ea8de7fac7a0c9b800e630').style = 'width: 100px; height: 100px;display: flex;';
+        document.getElementById('img65ea8de7fac7a0c9b800e630').src = secure_url;
+        return false;
+    })();return false;"/>
+    <button style="background-color: #0010f7; color: white; border-radius: 0.375rem; font-size: 14px; font-weight: 700; height: 40px; padding: 0.5rem 1rem; border: none; cursor: pointer;"onclick="(function(){
+        document.getElementById('input65ea8de7fac7a0c9b800e630').click();
+    })()">Upload Image</button>
+    <button style="background-color: rgb(255, 69, 94); color: white; border-radius: 0.375rem; font-size: 14px; font-weight: 700; height: 40px; padding: 0.5rem 1rem; border: none; cursor: pointer;" onclick="(function(){
+        document.getElementById('img65ea8de7fac7a0c9b800e630').src = '';
+        document.getElementById('img65ea8de7fac7a0c9b800e630').style = 'display: none;';
+    })()">Delete Image</button>
+    <img id="img65ea8de7fac7a0c9b800e630" style="display: none;" class="feedback-image"/></div>
+</td>

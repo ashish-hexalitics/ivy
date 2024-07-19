@@ -1,0 +1,166 @@
+<body>
+  <div class="page" style="page-break-before: always">
+    <div class="header page-width">
+      <div class="logo-div">
+        <div><img src=" ${IVY_LOGO} " class="ivy-logo" /></div>
+        <div><img src=" ${COMPANY_LOGO} " class="company-logo" /></div>
+      </div>
+    </div>
+
+    <div class="container first-page page-width">
+      <h1>REPORT_TYPE</h1>
+      <div
+        class="hero-img"
+        style="height: 500px; width: auto; background-position: center"
+      >
+        <img src=" ${PROPERTY_IMAGE} " />
+      </div>
+    </div>
+
+    <div class="container page-width">
+      <table class="first-table">
+        <tr>
+          <td class="label">Report date</td>
+          <td>REPORT_DATE</td>
+          <td class="label">Ref No</td>
+          <td>REF_NUM</td>
+        </tr>
+        <tr>
+          <td class="label">Address</td>
+          <td id="address">PROPERTY_ADDRESS , POSTCODE</td>
+          <td class="label">Tenancy type</td>
+          <td>TENANCY_TYPE</td>
+        </tr>
+        <tr>
+          <td class="label">Compiled for</td>
+          <td>CUSTOMER_NAME</td>
+          <td class="label">Tenancy date</td>
+          <td>TENANT_START_DATE</td>
+        </tr>
+
+        <tr>
+          <td class="label">Property type</td>
+          <td>PROPERTY_TYPE</td>
+          <td class="label">Tenant names</td>
+          <td rowspan="2">TENANTS</td>
+        </tr>
+      </table>
+
+      <div class="section">
+        <div class="text">
+          <p>
+            <a href=" ${GALLERY_URL} " target="_blank" class="btn"
+              >View photo gallery</a
+            >
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- <div class="footer page-width">
+        <div> REPORT_TYPE for PROPERTY_ADDRESS </div>
+        <div>Page PG_NUM </div>
+    </div> -->
+  </div>
+
+  <!-- second page contents -->
+  <!-- <div class="page" style="page-break-before: always"> 
+        <div class="container page-width">
+            <h1>Table of Contents</h1>
+            <div class="section">
+              <ol class="toc-list">
+                <li>
+                  <a href="#">
+                    <span class="title">Homepage<span class="leaders" aria-hidden="true"></span></span>
+                    <span class="page"><span class="visually-hidden">Page</span> 1</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <span class="title">Table of Contents<span class="leaders" aria-hidden="true"></span></span>
+                    <span class="page"><span class="visually-hidden">Page</span> 2</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <span class="title">Definition<span class="leaders" aria-hidden="true"></span></span>
+                    <span class="page"><span class="visually-hidden">Page</span> REF_NUM </span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <span class="title">Schedule of Condition<span class="leaders" aria-hidden="true"></span></span>
+                    <span class="page"><span class="visually-hidden">Page</span> REF_NUM </span>
+                  </a>
+                </li>
+    
+                DYNAMIC_CONTENT
+                
+                <li>
+                  <a href="#">
+                    <span class="title">Rooms & Areas<span class="leaders" aria-hidden="true"></span></span>
+                    <span class="page"><span class="visually-hidden">Page</span>  </span>
+                  </a>
+                  <ol role="list">
+                    ROOMS_AND_AREAS
+                  </ol>
+                </li>
+                <li>
+                  <a href="#">
+                    <span class="title">Declaration<span class="leaders" aria-hidden="true"></span><span class="leaders" aria-hidden="true"></span></span>
+                    <span class="page"><span class="visually-hidden">Page</span> REF_NUM </span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <span class="title">Disclaimer<span class="leaders" aria-hidden="true"></span></span>
+                    <span class="page"><span class="visually-hidden">Page</span> REF_NUM </span>
+                  </a>
+                  <a href="#">
+                    <span class="title">Documents<span class="leaders" aria-hidden="true"></span></span>
+                    <span class="page"><span class="visually-hidden">Page</span> REF_NUM </span>
+                  </a>
+                </li>
+              </ol>
+            </div>
+        </div>
+        <div class="footer page-width">
+            <div> REPORT_TYPE for PROPERTY_ADDRESS </div>
+            <div>Page PG_NUM </div>
+        </div>
+</div> -->
+  <!-- third page -->
+  <!-- fourth page schedule of condition-->
+  <div class="page" style="page-break-before: always">
+    <div class="container schedule page-width">
+      <h1>Schedule of Condition</h1>
+      <table>
+        <tr>
+          <th>Room/Area</th>
+          <th>Description</th>
+        </tr>
+
+        ROOMS_AND_AREAS_DESCRIPTIONS
+      </table>
+    </div>
+    <!-- <div class="footer page-width">
+        <div> REPORT_TYPE for PROPERTY_ADDRESS </div>
+        <div>Page PG_NUM </div>
+    </div> -->
+  </div>
+  <!-- fifth page overview page -->
+  OVERVIEW_SECTION
+  <!-- sixth page maintenance -->
+  MAINTENANCE_SECTION
+  <!-- seventh page meters -->
+  METERS_SECTION
+  <!-- eighth page -->
+  COMPLIANCE_SECTION
+  <!-- ninth page -->
+  UTILITIES_SECTION
+  <!-- tenth page -->
+  <div class="" style="page-break-before: always">
+    ROOMS_AND_AREAS_DESCRIPTIONS
+  </div>
+  <!-- eleventh page -->
+  <!-- twelveth page -->
+</body>
