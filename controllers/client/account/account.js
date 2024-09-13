@@ -1043,6 +1043,8 @@ const updateTemplate = asyncHandler(async (req, res) => {
 const getReports = asyncHandler(async (req, res) => {
   let custom_query = req.query;
   custom_query["admin_id"] = req.user.admin_id;
+  console.log(req.user.admin_id,"aya")
+
   if (req.user.type == "customer") {
     const properties = await req.user.getPropertyIdsOfCustomer();
     custom_query["property_id"] = properties;
@@ -3884,8 +3886,10 @@ const getReportPreview = asyncHandler(async (req, res) => {
   });
   const tenants = tenants_name.join(" , ");
   let html_template_list = [];
-  let css_url =
-    "https://res.cloudinary.com/dcugtdlab/raw/upload/v1716475143/kavouamykklzfjbsrstu.css";
+  let css_url2 = `http://localhost:${process.env.PORT}/css/report.css`
+
+  // let css_url =
+  //   "https://res.cloudinary.com/dcugtdlab/raw/upload/v1716475143/kavouamykklzfjbsrstu.css";
   // mark the time here
   const start_time = Date.now();
   let hydrate_template = fs
@@ -3897,7 +3901,6 @@ const getReportPreview = asyncHandler(async (req, res) => {
     property.address
   );
   hydrate_template = hydrate_template.replace(/REPORT_TYPE/g, report_type);
-  console.log(customer);
   for (let i = 1; i <= 13; i++) {
     // const file=htmlFiles[0];
     if (i == 1) {
@@ -5602,7 +5605,7 @@ const getReportPreview = asyncHandler(async (req, res) => {
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href=" ${css_url} ">
+        <link rel="stylesheet" href=" ${css_url2} ">
     </head>` +
     html_template_list[0] +
     `</body></html>`;
@@ -5610,6 +5613,7 @@ const getReportPreview = asyncHandler(async (req, res) => {
   html1 = html1.replace(/Invalid date/g, "N/A");
   // fs.writeFileSync("test.html",html1);
   // send this html file as response
+  console.log("preview")
   return res.send(html1);
 });
 

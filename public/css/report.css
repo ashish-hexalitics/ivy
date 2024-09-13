@@ -307,7 +307,6 @@ td.overview {
   width: 14.3% !important;
 }
 
-
 .definition th,
 .definition td {
   width: unset !important;
@@ -488,6 +487,89 @@ td div {
   padding-bottom: 0px;
   font-size: 12px;
   height: 50px;
+}
+
+@media (max-width: 767px) {
+  img.ivy-logo{
+    max-width: 100px !important;
+  }
+  img.company-logo {
+    max-width: 100px !important;
+  }
+  .hero-img img {
+    height: 300px !important;
+    width: 300px !important;
+  }
+
+  .first-table td:nth-child(odd) {
+    width: 10% !important;
+  }
+  
+  .first-table td:nth-child(even) {
+    width: 25% !important;
+  }
+
+  .container {
+    padding: 10px !important;
+  }
+
+  .header .logo-div {
+    /* flex-direction: column !important; */
+    align-items: center !important;
+  }
+  
+  .header.page-width,
+  .footer {
+    padding: 10px !important;
+  }
+  
+  .list-of-images figure,
+  .list-of-images figcaption,
+  .list-of-images a {
+    flex: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .first-table td:nth-child(odd),
+  .first-table td:nth-child(even) {
+    width: 100% !important;
+  }
+
+  table, th, td {
+    font-size: 11px !important;
+    padding: 4px !important;
+  }
+
+  td.label, td.response-no, td.response-yes, td.response-na, td.pad4, 
+  tr.maintenance-issue span, td.excellent, td.good, td.fair, td.poor {
+    font-size: 12px !important;
+  }
+
+  .roompage td:first-child:not(.pad4),
+  .roompage td:nth-child(2):not(.pad4, .pad4r),
+  .roompage td.pad4:nth-child(2) {
+    width: 100% !important;
+  }
+
+  .inspectornotes, #inspector-feedback textarea, #tenant-feedback textarea {
+    width: 100% !important;
+  }
+
+  .item-comment {
+    width: 100% !important;
+    margin-top: 10px !important;
+  }
+
+  .item-button {
+    width: 100% !important;
+    margin-right: 0 !important;
+  }
+
+  #footer1 {
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+    font-size: 10px !important;
+  }
 }
 /* .schedule th, .schedule td {
     height: 30px;
